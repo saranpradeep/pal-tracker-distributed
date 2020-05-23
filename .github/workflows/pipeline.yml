@@ -18,9 +18,9 @@ jobs:
       - name: Create test database
         run: |
           mysql -uroot -proot < databases/create_databases.sql
-          ./gradlew testMigrate
+          gradle testMigrate
       - name: Build with Gradle
-        run: ./gradlew clean build
+        run: gradle clean build
       - name: Publish allocations artifact
         uses: actions/upload-artifact@v1
         with:
@@ -174,7 +174,7 @@ jobs:
           cf api "$CF_API_URL"
           cf auth
           cf target -o "$CF_ORG" -s "$CF_SPACE"
-          ./gradlew cfMigrate
+          gradle cfMigrate
         env:
           CF_API_URL: ${{ secrets.CF_API_URL }}
           CF_ORG: ${{ secrets.CF_ORG }}
