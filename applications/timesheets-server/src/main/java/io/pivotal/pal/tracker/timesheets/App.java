@@ -6,10 +6,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.client.RestOperations;
-
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import java.util.TimeZone;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
+
+@EnableWebSecurity
 @EnableEurekaClient
 @SpringBootApplication
 @ComponentScan({"io.pivotal.pal.tracker.timesheets", "io.pivotal.pal.tracker.restsupport"})

@@ -7,11 +7,11 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.client.RestOperations;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
-
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import java.util.TimeZone;
 
 @EnableEurekaClient
-
+@EnableWebSecurity
 @SpringBootApplication
 @ComponentScan({"io.pivotal.pal.tracker.backlog", "io.pivotal.pal.tracker.restsupport"})
 public class App {
