@@ -14,9 +14,9 @@ buildscript {
         junitVersion = "4.12"
         okhttpVersion = "3.12.0"
         jsonPathVersion = "2.4.0"
-        springCloudVersion = "Finchley.RELEASE"
-        springCloudServicesClientLibrariesVersion = "2.0.3.RELEASE"
-
+        springCloudVersion = "Finchley.SR2"
+        springCloudServicesClientLibrariesVersion = "2.0.2.RELEASE"
+        springCloudCommonsVersion = "2.0.0.RELEASE"
     }
 
     repositories {
@@ -25,14 +25,12 @@ buildscript {
     }
 
     dependencies {
-        classpath("io.spring.gradle:dependency-management-plugin:1.0.7.RELEASE")
         classpath "org.springframework.boot:spring-boot-gradle-plugin:$springBootVersion"
         classpath "mysql:mysql-connector-java:$mysqlVersion"
     }
 }
 
 apply plugin: DependenciesGraphPlugin
-apply plugin: "io.spring.dependency-management"
 
 subprojects {
     group "io.pivotal.pal.tracker"
@@ -50,7 +48,6 @@ subprojects {
         compile "com.fasterxml.jackson.core:jackson-databind:$jacksonVersion"
         compile "com.fasterxml.jackson.core:jackson-annotations:$jacksonVersion"
         compile "org.slf4j:slf4j-api:$slf4jVersion"
-
 
         testCompile "junit:junit:$junitVersion"
         testCompile "org.mockito:mockito-core:$mockitoVersion"

@@ -2,7 +2,7 @@ applications:
 - name: tracker-registration
   path: ./applications/registration-server/build/libs/registration-server.jar
   routes:
-  - route: registration-antony-gnana-ashok-cts-uki.cfapps.io
+  - route: registration-pradeep-cts-uki.cfapps.io
   memory: 1G
   instances: 1
   env:
@@ -10,4 +10,3 @@ applications:
   services:
   - tracker-registration-database
   - tracker-service-registry
-
