@@ -11,6 +11,8 @@ import org.springframework.web.client.RestOperations;
 import io.pivotal.pal.tracker.allocations.EnableOAuth2Client;
 import io.pivotal.pal.tracker.allocations.EnableResourceServer;
 import io.pivotal.pal.tracker.allocations.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configuration;
+import org.springframework.security.oauth2.config.annotation.web.configuration;
 
 import java.util.TimeZone;
 

@@ -13,9 +13,11 @@ dependencies {
     compile "org.springframework.boot:spring-boot-starter-web"
     compile "org.springframework.boot:spring-boot-starter-actuator"
     compile "io.pivotal.spring.cloud:spring-cloud-services-starter-service-registry"
-    implementation "org.springframework.security.oauth.boot:spring-security-oauth2-autoconfigure:$springSecurityOAuthAutoconfigVersion"
+    compile "org.springframework.security.oauth.boot:spring-security-oauth2-autoconfigure:$springSecurityOAuthAutoconfigVersion"
 	compile "io.pivotal.spring.cloud:spring-cloud-sso-connector:$springCloudSsoVersion"
     implementation "org.springframework.boot:spring-boot-starter-security"
+    implementation "org.springframework.security.oauth:spring-security-oauth2"
+    implementation "org.springframework.security:spring-security-web"
 
     compile "com.zaxxer:HikariCP:$hikariVersion"
     compile "mysql:mysql-connector-java:$mysqlVersion"
