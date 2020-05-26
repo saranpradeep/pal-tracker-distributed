@@ -12,6 +12,7 @@ dependencies {
 
     compile "org.springframework.boot:spring-boot-starter-web"
     compile "org.springframework.boot:spring-boot-starter-actuator"
+    complie "org.springframework.boot:spring-boot-starter-security"
     compile "io.pivotal.spring.cloud:spring-cloud-services-starter-service-registry"
 
     compile "com.zaxxer:HikariCP:$hikariVersion"
