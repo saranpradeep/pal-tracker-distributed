@@ -8,9 +8,15 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.client.RestOperations;
 
+import io.pivotal.pal.tracker.allocations.EnableOAuth2Client;
+import io.pivotal.pal.tracker.allocations.EnableResourceServer;
+import io.pivotal.pal.tracker.allocations.EnableWebSecurity;
+
 import java.util.TimeZone;
 
-
+@EnableWebSecurity
+@EnableResourceServer
+@EnableOAuth2Client
 @EnableEurekaClient
 @SpringBootApplication
 @ComponentScan({"io.pivotal.pal.tracker.timesheets", "io.pivotal.pal.tracker.restsupport"})
